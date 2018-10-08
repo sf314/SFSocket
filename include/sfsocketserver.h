@@ -17,13 +17,13 @@
 class SFSocketServer {
 public:
     // Initialization
-    void init(int port);
+    int init(int port);
     
     // Main API
     int acceptConnection();
-    void send(std::string msg);
+    int send(std::string msg);
     std::string receive();
-    void closeConnection();
+    int closeConnection();
     
 private:
     int socket_fd; // Socket filedescriptor

@@ -17,11 +17,11 @@
 class SFSocketClient {
 public:
     // Initialization
-    void init();
+    int init();
     
     // Main API
     int connectTo(std::string server_ip, int portNum);
-    void send(std::string msg);
+    int send(std::string msg);
     std::string receive();
     
     // Configuration
